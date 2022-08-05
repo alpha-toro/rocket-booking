@@ -10,13 +10,14 @@ RocketBooking.grid.Seats = function(config) {
             action: 'mgr/seat/getlist'
             ,table: config.tableid
         }
-        ,fields: ['id', 'title', 'desc', 'table', 'rank', 'published', 'actions']
+        ,fields: ['id', 'title', 'desc', 'table', 'rank', 'booked', 'published', 'actions']
         ,paging: true
         ,ddGroup: 'mygridDD'
         ,enableDragDrop: true
         ,remoteSort: false
         ,cls: 'gallery-grid'
         ,bodyCssClass: 'grid-with-buttons'
+        ,save_action: 'mgr/seat/updatefromgrid'
         ,autosave: true
         ,preventRender: true
         ,autoExpandColumn: 'title'
@@ -37,13 +38,20 @@ RocketBooking.grid.Seats = function(config) {
           {
             header: _('rocketbooking.title')
             ,dataIndex: 'title'
-          },
-          {
+          }
+          ,{
             header: _('rocketbooking.desc')
             ,dataIndex: 'desc'
           }
           ,{
-              header: _('published')
+              header: _('rocketbooking.booked')
+              ,dataIndex: 'booked'
+              ,width: 50
+              ,renderer: {fn:this._renderBooked, scope: this}
+              ,editor: { xtype: 'rocketbooking-combo-booked', renderer: true }
+          }
+          ,{
+              header: _('rocketbooking.published')
               ,dataIndex: 'published'
               ,width: 50
               ,renderer: {fn:this._renderPublished, scope: this}
@@ -119,6 +127,7 @@ RocketBooking.grid.Seats = function(config) {
     this.on('sort',this.onSort,this);
     this.on('click', this.handleButtons, this);
 };
+
 Ext.extend(RocketBooking.grid.Seats,MODx.grid.Grid,{
     windows: {}
 
@@ -243,6 +252,10 @@ Ext.extend(RocketBooking.grid.Seats,MODx.grid.Grid,{
     }
 
     ,_renderPublished: function(value, p, record) {
+        return (value == 1) ? 'Yes' : 'No';
+    }
+
+    ,_renderBooked: function(value, p, record) {
         return (value == 1) ? 'Yes' : 'No';
     }
 
@@ -377,3 +390,23 @@ RocketBooking.window.UpdateSeat = function(config) {
 };
 Ext.extend(RocketBooking.window.UpdateSeat,MODx.Window);
 Ext.reg('rocketbooking-window-seat-update',RocketBooking.window.UpdateSeat);
+
+RocketBooking.combo.Booked = function(config) {
+    config = config || {};
+    Ext.applyIf(config,{
+        store: new Ext.data.ArrayStore({
+            id: 0
+            ,fields: ['booked','label']
+            ,data: [
+                [0,'No'],
+                [1,'Yes']
+            ]
+        })
+        ,mode: 'local'
+        ,displayField: 'label'
+        ,valueField: 'booked'
+    });
+    RocketBooking.combo.Booked.superclass.constructor.call(this,config);
+};
+Ext.extend(RocketBooking.combo.Booked,MODx.combo.ComboBox);
+Ext.reg('rocketbooking-combo-booked',RocketBooking.combo.Booked);

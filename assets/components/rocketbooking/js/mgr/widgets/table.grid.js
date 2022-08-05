@@ -19,7 +19,7 @@ RocketBooking.grid.Table = function(config) {
         id: 'rocketbooking-grid-table'
         ,url: RocketBooking.config.connectorUrl
         ,baseParams: { action: 'mgr/table/getlist' }
-        ,fields: ['id','name','description','rank', 'published']
+        ,fields: ['id','name','description','rank','price','published']
         ,autoHeight: true
         ,paging: true
         ,ddGroup: 'mygridDD'
@@ -47,6 +47,12 @@ RocketBooking.grid.Table = function(config) {
                 ,dataIndex: 'description'
                 ,width: 300
                 ,editor: { xtype: 'textfield' }
+            }
+            ,{
+                header: 'Price'
+                ,dataIndex: 'price'
+                ,width: 50
+                ,editor: { xtype: 'numberfield' }
             }
             ,{
                 header: _('published')
@@ -128,7 +134,6 @@ Ext.extend(RocketBooking.grid.Table,MODx.grid.Grid,{
                 text: _('rocketbooking.unpublish')
                 ,handler: this.unpublishTable
             });
-
         } else {
             m.push({
                 text: _('rocketbooking.publish')
@@ -268,6 +273,11 @@ RocketBooking.window.CreateTable = function(config) {
             ,fieldLabel: _('description')
             ,name: 'description'
             ,anchor: '100%'
+        },{
+            xtype: 'numberfield'
+            ,fieldLabel: 'Price'
+            ,name: 'price'
+            ,anchor: '100%'
         }]
     });
     RocketBooking.window.CreateTable.superclass.constructor.call(this,config);
@@ -298,6 +308,11 @@ RocketBooking.window.UpdateTable = function(config) {
             xtype: 'textarea'
             ,fieldLabel: _('description')
             ,name: 'description'
+            ,anchor: '100%'
+        },{
+            xtype: 'numberfield'
+            ,fieldLabel: 'Price'
+            ,name: 'price'
             ,anchor: '100%'
         }]
     });

@@ -12,7 +12,9 @@ $xpdo_meta_map['RocketBookingSeat']= array (
     'title' => '',
     'desc' => '',
     'rank' => 0,
-    'type' => 0,
+    'booked' => 0,
+    'price' => 0,
+    'type' => '',
     'published' => 1,
     'table' => 0,
   ),
@@ -41,14 +43,30 @@ $xpdo_meta_map['RocketBookingSeat']= array (
       'null' => false,
       'default' => 0,
     ),
-    'type' =>
+    'booked' =>
     array (
       'dbtype' => 'integer',
-      'precision' => '1',
+      'precision' => '5',
       'attributes' => 'unsigned',
       'phptype' => 'integer',
       'null' => false,
       'default' => 0,
+    ),
+    'price' =>
+    array (
+      'dbtype' => 'decimal',
+      'precision' => '6,2',
+      'attributes' => 'unsigned',
+      'phptype' => 'float',
+      'null' => false,
+      'default' => 0,
+    ),
+    'type' =>
+    array (
+      'dbtype' => 'text',
+      'phptype' => 'string',
+      'null' => false,
+      'default' => '',
     ),
     'published' =>
     array (

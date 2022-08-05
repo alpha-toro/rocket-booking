@@ -24,7 +24,7 @@
 /* load action into menu */
 $menu= $modx->newObject('modMenu');
 $menu->fromArray(array(
-    'text'        => 'Rocket Booking',
+    'text'        => 'rocketbooking',
     'parent'      => 'components',
     'description' => 'rocketbooking.menu_desc',
     'action'      => 'index',

@@ -2,7 +2,7 @@ RocketBooking.page.Table = function(config) {
     config = config || {};
     Ext.applyIf(config,{
         buttons: [{
-            text: _('rocketbooking.back_to_sets')
+            text: _('rocketbooking.back_to_tables')
             ,id: 'rocketbooking-btn-back'
             ,handler: function() {
                 MODx.loadPage('?a=index&namespace='+RocketBooking.request.namespace);

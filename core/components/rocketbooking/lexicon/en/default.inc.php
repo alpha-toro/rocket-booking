@@ -25,9 +25,12 @@
  */
 $_lang['rocketbooking'] = 'Booking Manager';
 $_lang['rocketbooking.menu_desc'] = 'Simple Booking Management';
-$_lang['rocketbooking.back_to_sets'] = 'Back to Tables';
+$_lang['rocketbooking.back_to_tables'] = 'Back to Tables';
+$_lang['rocketbooking.back_to_events'] = 'Back to Events';
 $_lang['rocketbooking.title'] = 'Title';
 $_lang['rocketbooking.desc'] = 'Description';
+$_lang['rocketbooking.price'] = 'Price';
+$_lang['rocketbooking.booked'] = 'Booked';
 $_lang['rocketbooking.publish'] = 'Publish';
 $_lang['rocketbooking.published'] = 'Published';
 $_lang['rocketbooking.unpublish'] = 'Unpublish';
@@ -46,7 +49,7 @@ $_lang['rocketbooking.table_update'] = 'Update Table';
 $_lang['rocketbooking.table_manage'] = 'Manage Table';
 
 $_lang['rocketbooking.seat_intro_msg'] = 'Manage your Tables.';
-$_lang['rocketbooking.items'] = 'Seats';
+$_lang['rocketbooking.seats'] = 'Seats';
 $_lang['rocketbooking.seat_create'] = 'Create Seat';
 $_lang['rocketbooking.seat_err_ae'] = 'A Seat already exists with that name.';
 $_lang['rocketbooking.seat_err_nf'] = 'Seat not found.';
