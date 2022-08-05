@@ -10,7 +10,7 @@ RocketBooking.grid.Seats = function(config) {
             action: 'mgr/seat/getlist'
             ,table: config.tableid
         }
-        ,fields: ['id', 'title', 'desc', 'table', 'rank', 'booked', 'published', 'actions']
+        ,fields: ['id', 'title', 'desc', 'table', 'rank', 'type', 'booked', 'published', 'actions']
         ,paging: true
         ,ddGroup: 'mygridDD'
         ,enableDragDrop: true
@@ -34,7 +34,6 @@ RocketBooking.grid.Seats = function(config) {
             ,direction: 'ASC'
         }
         ,columns: [
-          //this.exp,
           {
             header: _('rocketbooking.title')
             ,dataIndex: 'title'
@@ -42,6 +41,12 @@ RocketBooking.grid.Seats = function(config) {
           ,{
             header: _('rocketbooking.desc')
             ,dataIndex: 'desc'
+          }
+          ,{
+              header: _('rocketbooking.type')
+              ,dataIndex: 'type'
+              ,width: 60
+              ,editor: { xtype: 'rocketbooking-combo-type', renderer: true }
           }
           ,{
               header: _('rocketbooking.booked')
@@ -410,3 +415,24 @@ RocketBooking.combo.Booked = function(config) {
 };
 Ext.extend(RocketBooking.combo.Booked,MODx.combo.ComboBox);
 Ext.reg('rocketbooking-combo-booked',RocketBooking.combo.Booked);
+
+RocketBooking.combo.Type = function(config) {
+    config = config || {};
+    Ext.applyIf(config,{
+        store: new Ext.data.ArrayStore({
+            id: 0
+            ,fields: ['type','label']
+            ,data: [
+                ['Normal','Normal'],
+                ['Handicap','Handicap'],
+                ['VIP','VIP']
+            ]
+        })
+        ,mode: 'local'
+        ,displayField: 'label'
+        ,valueField: 'type'
+    });
+    RocketBooking.combo.Type.superclass.constructor.call(this,config);
+};
+Ext.extend(RocketBooking.combo.Type,MODx.combo.ComboBox);
+Ext.reg('rocketbooking-combo-type',RocketBooking.combo.Type);

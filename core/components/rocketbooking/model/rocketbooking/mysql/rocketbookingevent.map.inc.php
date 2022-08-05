@@ -2,10 +2,10 @@
 /**
  * @package rocketbooking
  */
-$xpdo_meta_map['RocketBookingTable']= array (
+$xpdo_meta_map['RocketBookingEvent']= array (
   'package' => 'rocketbooking',
   'version' => '1.1',
-  'table' => 'rocketbooking_table',
+  'table' => 'rocketbooking_event',
   'extends' => 'xPDOSimpleObject',
   'fields' =>
   array (
@@ -14,8 +14,7 @@ $xpdo_meta_map['RocketBookingTable']= array (
     'rank' => 0,
     'price' => 0,
     'published' => 1,
-    'type' => '',
-    'event' => 0
+    'type' => ''
   ),
   'fieldMeta' =>
   array (
@@ -68,36 +67,16 @@ $xpdo_meta_map['RocketBookingTable']= array (
       'null' => false,
       'default' => '',
     ),
-    'event' =>
-    array (
-      'dbtype' => 'integer',
-      'precision' => '10',
-      'attributes' => 'unsigned',
-      'phptype' => 'integer',
-      'null' => false,
-      'default' => 0,
-      'index' => 'index',
-    ),
   ),
   'composites' =>
   array (
-    'Seat' =>
+    'Table' =>
     array (
-      'class' => 'RocketBookingSeat',
+      'class' => 'RocketBookingTable',
       'local' => 'id',
-      'foreign' => 'table',
+      'foreign' => 'event',
       'cardinality' => 'many',
       'owner' => 'local',
-    ),
-    'aggregates' =>
-    array (
-    'Event' =>
-    array (
-      'class' => 'RocketBookingEvent',
-      'local' => 'event',
-      'foreign' => 'id',
-      'cardinality' => 'one',
-      'owner' => 'foreign',
     ),
   ),
 );

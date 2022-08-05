@@ -29,6 +29,19 @@ class RocketBookingTableGetListProcessor extends modObjectGetListProcessor {
     public $defaultSortField = 'rank';
     public $defaultSortDirection = 'ASC';
     public $objectType = 'rocketbooking.rocketbooking';
+
+    public function prepareQueryBeforeCount(xPDOQuery $c) {
+        $event   = $this->getProperty('event');
+        $query = $this->getProperty('query');
+
+        $c->where(['event' => $event]);
+        if (!empty($query)) {
+            $c->where([
+                'name:LIKE' => '%'.$query.'%'
+            ]);
+        }
+        return $c;
+    }
 }
 
 return 'RocketBookingTableGetListProcessor';

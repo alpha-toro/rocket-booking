@@ -18,16 +18,23 @@
  * @package rocketbooking
  */
 /**
- * Remove an Item.
+ * Update an Item
  *
  * @package rocketbooking
  * @subpackage processors
  */
-class RocketBookingTableRemoveProcessor extends modObjectRemoveProcessor {
-    public $classKey = 'RocketBookingTable';
-    public $languageTopic = array('rocketbooking:default');
-    public $objectType = 'rocketbooking.rocketbooking';
+require_once dirname(__FILE__) . '/update.class.php';
 
+class RocketBookingEventUpdateFromGridProcessor extends RocketBookingEventUpdateProcessor {
+    public function initialize() {
+        $data = $this->getProperty('data');
+        if (empty($data)) return $this->modx->lexicon('invalid_data');
+        $data = $this->modx->fromJSON($data);
+        if (empty($data)) return $this->modx->lexicon('invalid_data');
+        $this->setProperties($data);
+        $this->unsetProperty('data');
+        return parent::initialize();
+    }
 }
 
-return 'RocketBookingTableRemoveProcessor';
+return 'RocketBookingEventUpdateFromGridProcessor';

@@ -14,30 +14,11 @@
  * You should have received a copy of the GNU General Public License along with
  * RocketBooking; if not, write to the Free Software Foundation, Inc., 59 Temple
  * Place, Suite 330, Boston, MA 02111-1307 USA
- */
-/**
- * Add snippets to build
  *
  * @package rocketbooking
- * @subpackage build
  */
-$snippets   = array();
-$snippets[0]= $modx->newObject('modSnippet');
-$snippets[0]->fromArray(array(
-    'id'          => 0,
-    'name'        => 'RocketBooking',
-    'description' => 'Displays Tables.',
-    'snippet'     => getSnippetContent($sources['source_core'].'/elements/snippets/snippet.rocketbooking.php'),
-), '', true, true);
-unset($properties);
-
-$snippets[1]= $modx->newObject('modSnippet');
-$snippets[1]->fromArray(array(
-    'id'          => 1,
-    'name'        => 'RocketBookingSeats',
-    'description' => 'Displays Seats.',
-    'snippet'     => getSnippetContent($sources['source_core'].'/elements/snippets/snippet.rocketbookingseats.php'),
-), '', true, true);
-unset($properties);
-
-return $snippets;
+/**
+ * @package rocketbooking
+ */
+class RocketBookingEvent extends xPDOSimpleObject {}
+?>

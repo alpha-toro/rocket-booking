@@ -18,16 +18,17 @@
  * @package rocketbooking
  */
 /**
- * Remove an Item.
+ * Get a list of sets
  *
  * @package rocketbooking
  * @subpackage processors
  */
-class RocketBookingTableRemoveProcessor extends modObjectRemoveProcessor {
-    public $classKey = 'RocketBookingTable';
+class RocketBookingEventGetListProcessor extends modObjectGetListProcessor {
+    public $classKey = 'RocketBookingEvent';
     public $languageTopic = array('rocketbooking:default');
+    public $defaultSortField = 'rank';
+    public $defaultSortDirection = 'ASC';
     public $objectType = 'rocketbooking.rocketbooking';
-
 }
 
-return 'RocketBookingTableRemoveProcessor';
+return 'RocketBookingEventGetListProcessor';

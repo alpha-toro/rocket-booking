@@ -31,9 +31,23 @@ $_lang['rocketbooking.title'] = 'Title';
 $_lang['rocketbooking.desc'] = 'Description';
 $_lang['rocketbooking.price'] = 'Price';
 $_lang['rocketbooking.booked'] = 'Booked';
+$_lang['rocketbooking.type'] = 'Type';
 $_lang['rocketbooking.publish'] = 'Publish';
 $_lang['rocketbooking.published'] = 'Published';
 $_lang['rocketbooking.unpublish'] = 'Unpublish';
+
+$_lang['rocketbooking.event_intro_msg'] = 'Manage Events.';
+$_lang['rocketbooking.event'] = 'Events';
+$_lang['rocketbooking.event_create'] = 'Create Event';
+$_lang['rocketbooking.event_err_ae'] = 'A event with that name already exists.';
+$_lang['rocketbooking.event_err_nf'] = 'Event not found.';
+$_lang['rocketbooking.event_err_ns'] = 'Event not specified.';
+$_lang['rocketbooking.event_err_remove'] = 'An error occurred while trying to remove the Event.';
+$_lang['rocketbooking.event_err_save'] = 'An error occurred while trying to save the Event.';
+$_lang['rocketbooking.event_remove'] = 'Remove Event';
+$_lang['rocketbooking.event_remove_confirm'] = 'Are you sure you want to remove this Event? (All contained Data will be deleted as well)';
+$_lang['rocketbooking.event_update'] = 'Update Event';
+$_lang['rocketbooking.event_manage'] = 'Manage Event';
 
 $_lang['rocketbooking.table_intro_msg'] = 'Manage Tables.';
 $_lang['rocketbooking.table'] = 'Tables';

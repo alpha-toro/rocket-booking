@@ -1,15 +1,7 @@
 RocketBooking.page.Table = function(config) {
     config = config || {};
     Ext.applyIf(config,{
-        buttons: [{
-            text: _('rocketbooking.back_to_tables')
-            ,id: 'rocketbooking-btn-back'
-            ,handler: function() {
-                MODx.loadPage('?a=index&namespace='+RocketBooking.request.namespace);
-            }
-            ,scope: this
-        }]
-        ,components: [{
+        components: [{
             xtype: 'rocketbooking-panel-table'
             ,renderTo: 'rocketbooking-panel-table-div'
             ,tableid: config.tableid

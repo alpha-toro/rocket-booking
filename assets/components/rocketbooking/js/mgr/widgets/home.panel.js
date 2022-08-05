@@ -18,7 +18,7 @@ RocketBooking.panel.Home = function(config) {
                 {
                     items: [
                         {
-                            xtype: 'rocketbooking-grid-table'
+                            xtype: 'rocketbooking-grid-event'
                             ,preventRender: true
                             ,cls: 'main-wrapper'
                         }

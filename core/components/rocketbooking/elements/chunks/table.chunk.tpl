@@ -1,4 +1,5 @@
-<h2>
-    [[+name]] ([[+count]])
+<div>
+    [[+name]] ([[+type]])<br>
     <div>[[+description]]</div>
-</h2>
+    <div>[[+seats]]</div>
+</div>

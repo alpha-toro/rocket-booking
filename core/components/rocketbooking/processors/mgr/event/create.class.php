@@ -18,45 +18,31 @@
  * @package rocketbooking
  */
 /**
- * Create an Seat
+ * Create an FAQ set
  *
  * @package rocketbooking
  * @subpackage processors
  */
- class RocketBookingSeatCreateProcessor extends modObjectCreateProcessor {
-    public $classKey = 'RocketBookingSeat';
+ class RocketBookingEventCreateProcessor extends modObjectCreateProcessor {
+    public $classKey = 'RocketBookingEvent';
     public $languageTopic = array('rocketbooking:default');
     public $objectType = 'rocketbooking.rocketbooking';
 
     public function beforeSave() {
         $this->setRank();
-        $this->setPublished();
 
         return parent::beforeSave();
     }
 
     /**
-     * Set initial publish status based on set top-level
-     */
-    private function setPublished() {
-        // Check if set is currently mark as unpublished
-        $set = $this->modx->getObject('RocketBookingTable', $this->getProperty('table'));
-        if ($set->get('published') == false) {
-            $this->object->set('published', false);
-        }
-    }
-
-    /**
-     * New  Sets get added to the end of the list
+     * New FAQ Sets get added to the end of the list
      *
      * return void
      */
     private function setRank() {
-        $count = $this->modx->getCount($this->classKey, [
-            'table' => $this->getProperty('table', false)
-        ]);
+        $count = $this->modx->getCount($this->classKey);
         $this->object->set('rank', $count);
     }
  }
 
- return 'RocketBookingSeatCreateProcessor';
+ return 'RocketBookingEventCreateProcessor';

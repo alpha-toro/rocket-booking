@@ -18,7 +18,7 @@
  * @package rocketbooking
  */
 /**
- * Create an FAQ set
+ * Create an Table
  *
  * @package rocketbooking
  * @subpackage processors
@@ -35,7 +35,7 @@
     }
 
     /**
-     * New FAQ Sets get added to the end of the list
+     * New Tables get added to the end of the list
      *
      * return void
      */

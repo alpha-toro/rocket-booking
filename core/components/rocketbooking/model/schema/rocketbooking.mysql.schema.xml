@@ -1,13 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model package="rocketgallery" baseClass="xPDOObject" platform="mysql" defaultEngine="MyISAM" phpdoc-package="rocketgallery" version="1.1">
+<model package="rocketbooking" baseClass="xPDOObject" platform="mysql" defaultEngine="MyISAM" phpdoc-package="rocketbooking" version="1.1">
 
-    <!-- Items are grouped into 'sets', when categories are implemented they will be used to group items within sets -->
+    <object class="RocketBookingEvent" table="rocketgallery_event" extends="xPDOSimpleObject">
+        <field key="name" dbtype="varchar" precision="255" phptype="string" null="false" default="" />
+        <field key="description" dbtype="text" phptype="string" null="false" default="" />
+        <field key="price" dbtype="decimal" precision="6,2" attributes="unsigned" phptype="float" null="false" default="0" />
+        <field key="rank" dbtype="integer" precision="5" attributes="unsigned" phptype="integer" null="false" default="0" />
+        <field key="type" dbtype="integer" precision="1" attributes="unsigned" phptype="integer" null="false" default="0" />
+        <field key="published" dbtype="integer" precision="1" attributes="unsigned" phptype="integer" null="false" default="1" />
+        <composite alias="Table" class="RocketBookingTable" local="id" foreign="event" cardinality="many" owner="local" />
+    </object>
+
     <object class="RocketBookingTable" table="rocketgallery_table" extends="xPDOSimpleObject">
         <field key="name" dbtype="varchar" precision="255" phptype="string" null="false" default="" />
         <field key="description" dbtype="text" phptype="string" null="false" default="" />
+        <field key="price" dbtype="decimal" precision="6,2" attributes="unsigned" phptype="float" null="false" default="0" />
         <field key="rank" dbtype="integer" precision="5" attributes="unsigned" phptype="integer" null="false" default="0" />
+        <field key="type" dbtype="integer" precision="1" attributes="unsigned" phptype="integer" null="false" default="0" />
         <field key="published" dbtype="integer" precision="1" attributes="unsigned" phptype="integer" null="false" default="1" />
+        <field key="event" dbtype="integer" precision="10" attributes="unsigned" phptype="integer" null="false" default="0" index="index" />
         <composite alias="Seat" class="RocketBookingSeat" local="id" foreign="table" cardinality="many" owner="local" />
+        <aggregate alias="Event" class="RocketBookingEvent" local="event" foreign="id" cardinality="one" owner="foreign" />
     </object>
 
     <object class="RocketBookingSeat" table="rocketgallery_seats" extends="xPDOSimpleObject">

@@ -33,8 +33,9 @@ if ($object->xpdo) {
             /** @var xPDOManager $manager */
             $manager = $modx->getManager();
 
-            $manager->createObjectContainer('RocketBookingSeat');
+            $manager->createObjectContainer('RocketBookingEvent');
             $manager->createObjectContainer('RocketBookingTable');
+            $manager->createObjectContainer('RocketBookingSeat');
 
             break;
         case xPDOTransport::ACTION_UPGRADE:
