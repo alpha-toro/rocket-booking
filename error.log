@@ -1,0 +1,8 @@
+[04-Aug-2022 14:27:00 America/Chicago] PHP Fatal error:  Uncaught Error: Class 'RocketbookingTableManagerController' not found in /www/core/model/modx/modmanagerresponse.class.php:190
+Stack trace:
+#0 /www/core/model/modx/modmanagerresponse.class.php(78): modManagerResponse->instantiateController()
+#1 /www/core/model/modx/modmanagerrequest.class.php(187): modManagerResponse->outputContent()
+#2 /www/core/model/modx/modmanagerrequest.class.php(135): modManagerRequest->prepareResponse()
+#3 /www/manager/index.php(59): modManagerRequest->handleRequest()
+#4 {main}
+  thrown in /www/core/model/modx/modmanagerresponse.class.php on line 190

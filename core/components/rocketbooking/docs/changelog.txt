@@ -1,0 +1,6 @@
+Changelog for RocketBooking.
+
+
+RocketBooking 1.0.0 rc1
+==============
+- Initial release.
