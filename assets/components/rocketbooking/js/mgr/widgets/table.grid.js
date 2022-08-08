@@ -35,6 +35,11 @@ RocketBooking.grid.Table = function(config) {
         ,view: gridView
         ,columns: [
             {
+                header: _('id')
+                ,dataIndex: 'id'
+                ,width: 20
+            }
+            ,{
                 header: _('name')
                 ,dataIndex: 'name'
                 ,width: 100

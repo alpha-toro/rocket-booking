@@ -1,8 +1,231 @@
-[04-Aug-2022 14:27:00 America/Chicago] PHP Fatal error:  Uncaught Error: Class 'RocketbookingTableManagerController' not found in /www/core/model/modx/modmanagerresponse.class.php:190
+[05-Aug-2022 15:37:26 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 2 passed to RocketBooking::getChunk() must be of the type array, object given, called in /www/core/cache/includes/elements/modsnippet/15.include.cache.php on line 32 and defined in /www/core/components/rocketbooking/model/rocketbooking/rocketbooking.class.php:62
 Stack trace:
-#0 /www/core/model/modx/modmanagerresponse.class.php(78): modManagerResponse->instantiateController()
-#1 /www/core/model/modx/modmanagerrequest.class.php(187): modManagerResponse->outputContent()
-#2 /www/core/model/modx/modmanagerrequest.class.php(135): modManagerRequest->prepareResponse()
-#3 /www/manager/index.php(59): modManagerRequest->handleRequest()
-#4 {main}
-  thrown in /www/core/model/modx/modmanagerresponse.class.php on line 190
+#0 /www/core/cache/includes/elements/modsnippet/15.include.cache.php(32): RocketBooking->getChunk()
+#1 /www/core/model/modx/modscript.class.php(76): include('/www/core/cache...')
+#2 /www/core/model/modx/modparser.class.php(537): modScript->process()
+#3 /www/core/model/modx/modparser.class.php(251): modParser->processTag()
+#4 /www/core/model/modx/modparser.class.php(1152): modParser->processElementTags()
+#5 /www/core/model/modx/modparser.class.php(513): modFieldTag->process()
+#6 /www/core/model/modx/modparser.class.php(251): modParser->processTag()
+#7 /www/core/model/modx/modtemplate.class.php(126): modParser->processElementTags()
+#8 /www/core/model/modx/modresource.class.php(513): modTemplate->process()
+#9 /ww in /www/core/components/rocketbooking/model/rocketbooking/rocketbooking.class.php on line 62
+[05-Aug-2022 15:38:12 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined method xPDOQuery_mysql::sortdir() in /www/core/cache/includes/elements/modsnippet/15.include.cache.php:24
+Stack trace:
+#0 /www/core/model/modx/modscript.class.php(76): include()
+#1 /www/core/model/modx/modparser.class.php(537): modScript->process()
+#2 /www/core/model/modx/modparser.class.php(251): modParser->processTag()
+#3 /www/core/model/modx/modparser.class.php(1152): modParser->processElementTags()
+#4 /www/core/model/modx/modparser.class.php(513): modFieldTag->process()
+#5 /www/core/model/modx/modparser.class.php(251): modParser->processTag()
+#6 /www/core/model/modx/modtemplate.class.php(126): modParser->processElementTags()
+#7 /www/core/model/modx/modresource.class.php(513): modTemplate->process()
+#8 /www/core/model/modx/modresource.class.php(494): modResource->process()
+#9 /www/core/model/modx/modresponse.class.php(62): modResource->prepare()
+#10 /www/core/model/modx/modrequest.class.php(138): modResponse->outputContent()
+#11 /www/core/model/modx/modrequest.class.php(12 in /www/core/cache/includes/elements/modsnippet/15.include.cache.php on line 24
+[05-Aug-2022 15:38:41 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined method xPDOQuery_mysql::sortdir() in /www/core/cache/includes/elements/modsnippet/15.include.cache.php:24
+Stack trace:
+#0 /www/core/model/modx/modscript.class.php(76): include()
+#1 /www/core/model/modx/modparser.class.php(537): modScript->process()
+#2 /www/core/model/modx/modparser.class.php(251): modParser->processTag()
+#3 /www/core/model/modx/modparser.class.php(1152): modParser->processElementTags()
+#4 /www/core/model/modx/modparser.class.php(513): modFieldTag->process()
+#5 /www/core/model/modx/modparser.class.php(251): modParser->processTag()
+#6 /www/core/model/modx/modtemplate.class.php(126): modParser->processElementTags()
+#7 /www/core/model/modx/modresource.class.php(513): modTemplate->process()
+#8 /www/core/model/modx/modresource.class.php(494): modResource->process()
+#9 /www/core/model/modx/modresponse.class.php(62): modResource->prepare()
+#10 /www/core/model/modx/modrequest.class.php(138): modResponse->outputContent()
+#11 /www/core/model/modx/modrequest.class.php(12 in /www/core/cache/includes/elements/modsnippet/15.include.cache.php on line 24
+[05-Aug-2022 15:39:24 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined method xPDOQuery_mysql::sortdir() in /www/core/cache/includes/elements/modsnippet/15.include.cache.php:23
+Stack trace:
+#0 /www/core/model/modx/modscript.class.php(76): include()
+#1 /www/core/model/modx/modparser.class.php(537): modScript->process()
+#2 /www/core/model/modx/modparser.class.php(251): modParser->processTag()
+#3 /www/core/model/modx/modparser.class.php(1152): modParser->processElementTags()
+#4 /www/core/model/modx/modparser.class.php(513): modFieldTag->process()
+#5 /www/core/model/modx/modparser.class.php(251): modParser->processTag()
+#6 /www/core/model/modx/modtemplate.class.php(126): modParser->processElementTags()
+#7 /www/core/model/modx/modresource.class.php(513): modTemplate->process()
+#8 /www/core/model/modx/modresource.class.php(494): modResource->process()
+#9 /www/core/model/modx/modresponse.class.php(62): modResource->prepare()
+#10 /www/core/model/modx/modrequest.class.php(138): modResponse->outputContent()
+#11 /www/core/model/modx/modrequest.class.php(12 in /www/core/cache/includes/elements/modsnippet/15.include.cache.php on line 23
+[05-Aug-2022 15:39:25 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined method xPDOQuery_mysql::sortdir() in /www/core/cache/includes/elements/modsnippet/15.include.cache.php:23
+Stack trace:
+#0 /www/core/model/modx/modscript.class.php(76): include()
+#1 /www/core/model/modx/modparser.class.php(537): modScript->process()
+#2 /www/core/model/modx/modparser.class.php(251): modParser->processTag()
+#3 /www/core/model/modx/modparser.class.php(1152): modParser->processElementTags()
+#4 /www/core/model/modx/modparser.class.php(513): modFieldTag->process()
+#5 /www/core/model/modx/modparser.class.php(251): modParser->processTag()
+#6 /www/core/model/modx/modtemplate.class.php(126): modParser->processElementTags()
+#7 /www/core/model/modx/modresource.class.php(513): modTemplate->process()
+#8 /www/core/model/modx/modresource.class.php(494): modResource->process()
+#9 /www/core/model/modx/modresponse.class.php(62): modResource->prepare()
+#10 /www/core/model/modx/modrequest.class.php(138): modResponse->outputContent()
+#11 /www/core/model/modx/modrequest.class.php(12 in /www/core/cache/includes/elements/modsnippet/15.include.cache.php on line 23
+[05-Aug-2022 15:40:04 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined method xPDOQuery_mysql::sortdir() in /www/core/cache/includes/elements/modsnippet/15.include.cache.php:23
+Stack trace:
+#0 /www/core/model/modx/modscript.class.php(76): include()
+#1 /www/core/model/modx/modparser.class.php(537): modScript->process()
+#2 /www/core/model/modx/modparser.class.php(251): modParser->processTag()
+#3 /www/core/model/modx/modparser.class.php(1152): modParser->processElementTags()
+#4 /www/core/model/modx/modparser.class.php(513): modFieldTag->process()
+#5 /www/core/model/modx/modparser.class.php(251): modParser->processTag()
+#6 /www/core/model/modx/modtemplate.class.php(126): modParser->processElementTags()
+#7 /www/core/model/modx/modresource.class.php(513): modTemplate->process()
+#8 /www/core/model/modx/modresource.class.php(494): modResource->process()
+#9 /www/core/model/modx/modresponse.class.php(62): modResource->prepare()
+#10 /www/core/model/modx/modrequest.class.php(138): modResponse->outputContent()
+#11 /www/core/model/modx/modrequest.class.php(12 in /www/core/cache/includes/elements/modsnippet/15.include.cache.php on line 23
+[05-Aug-2022 15:40:19 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined method xPDOQuery_mysql::sortdir() in /www/core/cache/includes/elements/modsnippet/15.include.cache.php:23
+Stack trace:
+#0 /www/core/model/modx/modscript.class.php(76): include()
+#1 /www/core/model/modx/modparser.class.php(537): modScript->process()
+#2 /www/core/model/modx/modparser.class.php(251): modParser->processTag()
+#3 /www/core/model/modx/modparser.class.php(1152): modParser->processElementTags()
+#4 /www/core/model/modx/modparser.class.php(513): modFieldTag->process()
+#5 /www/core/model/modx/modparser.class.php(251): modParser->processTag()
+#6 /www/core/model/modx/modtemplate.class.php(126): modParser->processElementTags()
+#7 /www/core/model/modx/modresource.class.php(513): modTemplate->process()
+#8 /www/core/model/modx/modresource.class.php(494): modResource->process()
+#9 /www/core/model/modx/modresponse.class.php(62): modResource->prepare()
+#10 /www/core/model/modx/modrequest.class.php(138): modResponse->outputContent()
+#11 /www/core/model/modx/modrequest.class.php(12 in /www/core/cache/includes/elements/modsnippet/15.include.cache.php on line 23
+[05-Aug-2022 15:40:41 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined method xPDOQuery_mysql::sortdir() in /www/core/cache/includes/elements/modsnippet/15.include.cache.php:23
+Stack trace:
+#0 /www/core/model/modx/modscript.class.php(76): include()
+#1 /www/core/model/modx/modparser.class.php(537): modScript->process()
+#2 /www/core/model/modx/modparser.class.php(251): modParser->processTag()
+#3 /www/core/model/modx/modparser.class.php(1152): modParser->processElementTags()
+#4 /www/core/model/modx/modparser.class.php(513): modFieldTag->process()
+#5 /www/core/model/modx/modparser.class.php(251): modParser->processTag()
+#6 /www/core/model/modx/modtemplate.class.php(126): modParser->processElementTags()
+#7 /www/core/model/modx/modresource.class.php(513): modTemplate->process()
+#8 /www/core/model/modx/modresource.class.php(494): modResource->process()
+#9 /www/core/model/modx/modresponse.class.php(62): modResource->prepare()
+#10 /www/core/model/modx/modrequest.class.php(138): modResponse->outputContent()
+#11 /www/core/model/modx/modrequest.class.php(12 in /www/core/cache/includes/elements/modsnippet/15.include.cache.php on line 23
+[05-Aug-2022 15:40:48 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined method xPDOQuery_mysql::sortdir() in /www/core/cache/includes/elements/modsnippet/15.include.cache.php:23
+Stack trace:
+#0 /www/core/model/modx/modscript.class.php(76): include()
+#1 /www/core/model/modx/modparser.class.php(537): modScript->process()
+#2 /www/core/model/modx/modparser.class.php(251): modParser->processTag()
+#3 /www/core/model/modx/modparser.class.php(1152): modParser->processElementTags()
+#4 /www/core/model/modx/modparser.class.php(513): modFieldTag->process()
+#5 /www/core/model/modx/modparser.class.php(251): modParser->processTag()
+#6 /www/core/model/modx/modtemplate.class.php(126): modParser->processElementTags()
+#7 /www/core/model/modx/modresource.class.php(513): modTemplate->process()
+#8 /www/core/model/modx/modresource.class.php(494): modResource->process()
+#9 /www/core/model/modx/modresponse.class.php(62): modResource->prepare()
+#10 /www/core/model/modx/modrequest.class.php(138): modResponse->outputContent()
+#11 /www/core/model/modx/modrequest.class.php(12 in /www/core/cache/includes/elements/modsnippet/15.include.cache.php on line 23
+[05-Aug-2022 15:45:11 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 2 passed to modX::getChunk() must be of the type array, object given, called in /www/core/cache/includes/elements/modsnippet/15.include.cache.php on line 29 and defined in /www/core/model/modx/modx.class.php:1879
+Stack trace:
+#0 /www/core/cache/includes/elements/modsnippet/15.include.cache.php(29): modX->getChunk()
+#1 /www/core/model/modx/modscript.class.php(76): include('/www/core/cache...')
+#2 /www/core/model/modx/modparser.class.php(537): modScript->process()
+#3 /www/core/model/modx/modparser.class.php(251): modParser->processTag()
+#4 /www/core/model/modx/modparser.class.php(1152): modParser->processElementTags()
+#5 /www/core/model/modx/modparser.class.php(513): modFieldTag->process()
+#6 /www/core/model/modx/modparser.class.php(251): modParser->processTag()
+#7 /www/core/model/modx/modtemplate.class.php(126): modParser->processElementTags()
+#8 /www/core/model/modx/modresource.class.php(513): modTemplate->process()
+#9 /www/core/model/modx/modresource.class.php(494): modResource-> in /www/core/model/modx/modx.class.php on line 1879
+[05-Aug-2022 16:30:52 America/Chicago] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 520192 bytes) in /www/core/model/modx/modparser.class.php on line 144
+[05-Aug-2022 16:31:13 America/Chicago] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 741376 bytes) in /www/core/cache/includes/elements/modsnippet/16.include.cache.php on line 32
+[05-Aug-2022 16:31:50 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function toArray() on array in /www/core/cache/includes/elements/modsnippet/16.include.cache.php:33
+Stack trace:
+#0 /www/core/model/modx/modscript.class.php(76): include()
+#1 /www/core/model/modx/modparser.class.php(537): modScript->process()
+#2 /www/core/model/modx/modparser.class.php(251): modParser->processTag()
+#3 /www/core/model/modx/modparser.class.php(1152): modParser->processElementTags()
+#4 /www/core/model/modx/modparser.class.php(513): modFieldTag->process()
+#5 /www/core/model/modx/modparser.class.php(251): modParser->processTag()
+#6 /www/core/model/modx/modtemplate.class.php(126): modParser->processElementTags()
+#7 /www/core/model/modx/modresource.class.php(513): modTemplate->process()
+#8 /www/core/model/modx/modresource.class.php(494): modResource->process()
+#9 /www/core/model/modx/modresponse.class.php(62): modResource->prepare()
+#10 /www/core/model/modx/modrequest.class.php(138): modResponse->outputContent()
+#11 /www/core/model/modx/modrequest.class.php(122): mod in /www/core/cache/includes/elements/modsnippet/16.include.cache.php on line 33
+[05-Aug-2022 16:32:21 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function toArray() on array in /www/core/cache/includes/elements/modsnippet/16.include.cache.php:33
+Stack trace:
+#0 /www/core/model/modx/modscript.class.php(76): include()
+#1 /www/core/model/modx/modparser.class.php(537): modScript->process()
+#2 /www/core/model/modx/modparser.class.php(251): modParser->processTag()
+#3 /www/core/model/modx/modparser.class.php(1152): modParser->processElementTags()
+#4 /www/core/model/modx/modparser.class.php(513): modFieldTag->process()
+#5 /www/core/model/modx/modparser.class.php(251): modParser->processTag()
+#6 /www/core/model/modx/modtemplate.class.php(126): modParser->processElementTags()
+#7 /www/core/model/modx/modresource.class.php(513): modTemplate->process()
+#8 /www/core/model/modx/modresource.class.php(494): modResource->process()
+#9 /www/core/model/modx/modresponse.class.php(62): modResource->prepare()
+#10 /www/core/model/modx/modrequest.class.php(138): modResponse->outputContent()
+#11 /www/core/model/modx/modrequest.class.php(122): mod in /www/core/cache/includes/elements/modsnippet/16.include.cache.php on line 33
+[05-Aug-2022 16:32:22 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function toArray() on array in /www/core/cache/includes/elements/modsnippet/16.include.cache.php:33
+Stack trace:
+#0 /www/core/model/modx/modscript.class.php(76): include()
+#1 /www/core/model/modx/modparser.class.php(537): modScript->process()
+#2 /www/core/model/modx/modparser.class.php(251): modParser->processTag()
+#3 /www/core/model/modx/modparser.class.php(1152): modParser->processElementTags()
+#4 /www/core/model/modx/modparser.class.php(513): modFieldTag->process()
+#5 /www/core/model/modx/modparser.class.php(251): modParser->processTag()
+#6 /www/core/model/modx/modtemplate.class.php(126): modParser->processElementTags()
+#7 /www/core/model/modx/modresource.class.php(513): modTemplate->process()
+#8 /www/core/model/modx/modresource.class.php(494): modResource->process()
+#9 /www/core/model/modx/modresponse.class.php(62): modResource->prepare()
+#10 /www/core/model/modx/modrequest.class.php(138): modResponse->outputContent()
+#11 /www/core/model/modx/modrequest.class.php(122): mod in /www/core/cache/includes/elements/modsnippet/16.include.cache.php on line 33
+[08-Aug-2022 10:24:02 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 2 passed to modX::getChunk() must be of the type array, null given, called in /www/core/cache/includes/elements/modsnippet/17.include.cache.php on line 60 and defined in /www/core/model/modx/modx.class.php:1879
+Stack trace:
+#0 /www/core/cache/includes/elements/modsnippet/17.include.cache.php(60): modX->getChunk()
+#1 /www/core/model/modx/modscript.class.php(76): include('/www/core/cache...')
+#2 /www/core/model/modx/modparser.class.php(537): modScript->process()
+#3 /www/core/model/modx/modparser.class.php(251): modParser->processTag()
+#4 /www/core/model/modx/modparser.class.php(1152): modParser->processElementTags()
+#5 /www/core/model/modx/modparser.class.php(513): modFieldTag->process()
+#6 /www/core/model/modx/modparser.class.php(251): modParser->processTag()
+#7 /www/core/model/modx/modtemplate.class.php(126): modParser->processElementTags()
+#8 /www/core/model/modx/modresource.class.php(513): modTemplate->process()
+#9 /www/core/model/modx/modresource.class.php(494): modResource->pr in /www/core/model/modx/modx.class.php on line 1879
+[08-Aug-2022 10:24:26 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 2 passed to modX::getChunk() must be of the type array, null given, called in /www/core/cache/includes/elements/modsnippet/17.include.cache.php on line 60 and defined in /www/core/model/modx/modx.class.php:1879
+Stack trace:
+#0 /www/core/cache/includes/elements/modsnippet/17.include.cache.php(60): modX->getChunk()
+#1 /www/core/model/modx/modscript.class.php(76): include('/www/core/cache...')
+#2 /www/core/model/modx/modparser.class.php(537): modScript->process()
+#3 /www/core/model/modx/modparser.class.php(251): modParser->processTag()
+#4 /www/core/model/modx/modparser.class.php(1152): modParser->processElementTags()
+#5 /www/core/model/modx/modparser.class.php(513): modFieldTag->process()
+#6 /www/core/model/modx/modparser.class.php(251): modParser->processTag()
+#7 /www/core/model/modx/modtemplate.class.php(126): modParser->processElementTags()
+#8 /www/core/model/modx/modresource.class.php(513): modTemplate->process()
+#9 /www/core/model/modx/modresource.class.php(494): modResource->pr in /www/core/model/modx/modx.class.php on line 1879
+[08-Aug-2022 10:27:18 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 2 passed to modX::getChunk() must be of the type array, string given, called in /www/core/cache/includes/elements/modsnippet/17.include.cache.php on line 69 and defined in /www/core/model/modx/modx.class.php:1879
+Stack trace:
+#0 /www/core/cache/includes/elements/modsnippet/17.include.cache.php(69): modX->getChunk()
+#1 /www/core/model/modx/modscript.class.php(76): include('/www/core/cache...')
+#2 /www/core/model/modx/modparser.class.php(537): modScript->process()
+#3 /www/core/model/modx/modparser.class.php(251): modParser->processTag()
+#4 /www/core/model/modx/modparser.class.php(1152): modParser->processElementTags()
+#5 /www/core/model/modx/modparser.class.php(513): modFieldTag->process()
+#6 /www/core/model/modx/modparser.class.php(251): modParser->processTag()
+#7 /www/core/model/modx/modtemplate.class.php(126): modParser->processElementTags()
+#8 /www/core/model/modx/modresource.class.php(513): modTemplate->process()
+#9 /www/core/model/modx/modresource.class.php(494): modResource-> in /www/core/model/modx/modx.class.php on line 1879
+[08-Aug-2022 10:29:48 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 2 passed to modX::getChunk() must be of the type array, string given, called in /www/core/cache/includes/elements/modsnippet/17.include.cache.php on line 69 and defined in /www/core/model/modx/modx.class.php:1879
+Stack trace:
+#0 /www/core/cache/includes/elements/modsnippet/17.include.cache.php(69): modX->getChunk()
+#1 /www/core/model/modx/modscript.class.php(76): include('/www/core/cache...')
+#2 /www/core/model/modx/modparser.class.php(537): modScript->process()
+#3 /www/core/model/modx/modparser.class.php(251): modParser->processTag()
+#4 /www/core/model/modx/modparser.class.php(1152): modParser->processElementTags()
+#5 /www/core/model/modx/modparser.class.php(513): modFieldTag->process()
+#6 /www/core/model/modx/modparser.class.php(251): modParser->processTag()
+#7 /www/core/model/modx/modtemplate.class.php(126): modParser->processElementTags()
+#8 /www/core/model/modx/modresource.class.php(513): modTemplate->process()
+#9 /www/core/model/modx/modresource.class.php(494): modResource-> in /www/core/model/modx/modx.class.php on line 1879
+[08-Aug-2022 11:01:18 America/Chicago] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /www/core/components/rocketbooking/model/rocketbooking/mysql/rocketbookingtable.map.inc.php on line 103
+[08-Aug-2022 11:02:02 America/Chicago] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /www/core/components/rocketbooking/model/rocketbooking/mysql/rocketbookingtable.map.inc.php on line 103
+[08-Aug-2022 11:03:32 America/Chicago] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /www/core/components/rocketbooking/model/rocketbooking/mysql/rocketbookingtable.map.inc.php on line 103

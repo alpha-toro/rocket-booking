@@ -89,7 +89,8 @@ $xpdo_meta_map['RocketBookingTable']= array (
       'cardinality' => 'many',
       'owner' => 'local',
     ),
-    'aggregates' =>
+  ),
+  'aggregates' =>
     array (
     'Event' =>
     array (

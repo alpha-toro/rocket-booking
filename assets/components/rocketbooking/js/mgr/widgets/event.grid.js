@@ -19,7 +19,7 @@ RocketBooking.grid.Event = function(config) {
         id: 'rocketbooking-grid-event'
         ,url: RocketBooking.config.connectorUrl
         ,baseParams: { action: 'mgr/event/getlist' }
-        ,fields: ['id','name','description','rank','price','published']
+        ,fields: ['id','name','description','rank','type','price','published']
         ,autoHeight: true
         ,paging: true
         ,ddGroup: 'mygridDD'
@@ -32,6 +32,11 @@ RocketBooking.grid.Event = function(config) {
         ,view: gridView
         ,columns: [
             {
+                header: _('id')
+                ,dataIndex: 'id'
+                ,width: 20
+            }
+            ,{
                 header: _('name')
                 ,dataIndex: 'name'
                 ,width: 100

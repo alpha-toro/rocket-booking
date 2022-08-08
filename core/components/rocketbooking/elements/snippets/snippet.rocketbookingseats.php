@@ -2,6 +2,8 @@
 /**
  *
  * @package rocketbooking
+ * [[RocketBookingSeats? &table_id=`4`]]
+ *
  */
 
 $RocketBooking = $modx->getService(
@@ -38,14 +40,14 @@ foreach ($records as $r) {
 
 
     $c = $modx->newQuery('RocketBookingSeat');
-    $c->where(array(
-        'table' => $rArray['id'], 'published' => 1
-    ));
+    $c->where(array('table' => $rArray['id'], 'published' => 1));
+    $c->sortby('rank','ASC');
+
     $seats = $modx->getCollection('RocketBookingSeat',$c);
 
     foreach ($seats as $s) {
         $sArray = $s->toArray();
-        $tableArray['seats'] = $modx->getChunk($seat_tpl, $sArray);
+        $tableArray['seats'] .= $modx->getChunk($seat_tpl, $sArray);
     }
 
     $output .= $modx->getChunk($table_tpl, $tableArray);

@@ -26,7 +26,7 @@ $snippets[0]= $modx->newObject('modSnippet');
 $snippets[0]->fromArray(array(
     'id'          => 0,
     'name'        => 'RocketBooking',
-    'description' => 'Displays Tables.',
+    'description' => 'Displays Events.',
     'snippet'     => getSnippetContent($sources['source_core'].'/elements/snippets/snippet.rocketbooking.php'),
 ), '', true, true);
 unset($properties);
@@ -35,8 +35,17 @@ $snippets[1]= $modx->newObject('modSnippet');
 $snippets[1]->fromArray(array(
     'id'          => 1,
     'name'        => 'RocketBookingSeats',
-    'description' => 'Displays Seats.',
+    'description' => 'Displays Seats of a Table.',
     'snippet'     => getSnippetContent($sources['source_core'].'/elements/snippets/snippet.rocketbookingseats.php'),
+), '', true, true);
+unset($properties);
+
+$snippets[2]= $modx->newObject('modSnippet');
+$snippets[2]->fromArray(array(
+    'id'          => 2,
+    'name'        => 'RocketBookingTables',
+    'description' => 'Displays Tables of an Event.',
+    'snippet'     => getSnippetContent($sources['source_core'].'/elements/snippets/snippet.rocketbookingtables.php'),
 ), '', true, true);
 unset($properties);
 
